@@ -2,13 +2,15 @@
 
 ##资料
 [spring 文档](https://spring.io/guides)
-https://spring.io/guides/gs/serving-web-content/
-https://elasticsearch.cn/explore
+[spring Web文档](https://spring.io/guides/gs/serving-web-content/)
+[该项目官方社区](https://elasticsearch.cn/explore)
+[该项目官方视频](https://www.bilibili.com/video/av65117012?p=4)
+[Bootstrap起步](https://v3.bootcss.com/getting-started/)
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
 
-[Spring官方文档]()
 ##工具
-https://git-scm.com/download
+[git地址](https://git-scm.com/download)
+[Visual Paradigm](https://www.visual-paradigm.com/tw/)
 
 ##脚本
 ```sql
