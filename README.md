@@ -7,7 +7,7 @@
 [该项目官方视频](https://www.bilibili.com/video/av65117012?p=4)
 [Bootstrap起步](https://v3.bootcss.com/getting-started/)
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
-
+[flyway](https://flywaydb.org/getstarted/)
 ##工具
 [git地址](https://git-scm.com/download)
 [Visual Paradigm](https://www.visual-paradigm.com/tw/)

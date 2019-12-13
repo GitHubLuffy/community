@@ -20,8 +20,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(HttpServletRequest request){
-        Cookie[] cookies = request.getCookies();//请求cooick是用request请求去获取
-
+        Cookie[] cookies = request.getCookies();
         for (Cookie cookie : cookies){
             if (null != cookie){
                 if ("token".equals(cookie.getName())){
@@ -33,10 +32,7 @@ public class IndexController {
                 }
                 break;
             }
-
-
         }
-
         return "index";
     }
 
