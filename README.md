@@ -8,9 +8,12 @@
 [Bootstrap起步](https://v3.bootcss.com/getting-started/)
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/authorizing-oauth-apps/)
 [flyway](https://flywaydb.org/getstarted/)
+[Thymeleat](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
+
 ##工具
 [git地址](https://git-scm.com/download)
 [Visual Paradigm](https://www.visual-paradigm.com/tw/)
+[lombok](https://projectlombok.org/)
 
 ##脚本
 ```sql
