@@ -1,7 +1,6 @@
 package life.majiang.community.controller;
 
 import life.majiang.community.mapper.QuestionMapper;
-import life.majiang.community.mapper.UserMapper;
 import life.majiang.community.model.Question;
 import life.majiang.community.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -25,9 +23,6 @@ public class PublishController {
 
     @Autowired
     private QuestionMapper questionMapper;
-
-    @Autowired
-    private UserMapper userMapper;
 
     @GetMapping("/publish")
     public String publish() {
@@ -55,27 +50,11 @@ public class PublishController {
             return "publish";
         }
         if (tag == null || tag == "") {
-            model.addAttribute("error", "b标签不能为空");
+            model.addAttribute("error", "标签不能为空");
             return "publish";
         }
 
-
-        User user = null;
-
-        Cookie[] cookies = request.getCookies();//请求cookie是用request请求去获取
-        if (cookies != null && cookies.length != 0)
-            for (Cookie cookie : cookies) {
-                if (null != cookie) {
-                    if ("token".equals(cookie.getName())) {
-                        String token = cookie.getValue();
-                        user = userMapper.findByToken(token);
-                        if (null != user) {
-                            request.getSession().setAttribute("user", user);
-                        }
-                    }
-                    break;
-                }
-            }
+        User user = (User) request.getSession().getAttribute("user");
 
         if (null == user) {
             model.addAttribute("error", "用户未登录");
