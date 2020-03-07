@@ -60,9 +60,9 @@ public class AuthorizeController {
             user.setAccountId(String.valueOf(githubUser.getId()));
             user.setAvatarUrl(githubUser.getAvatarUrl());
             userService.createOrUpdate(user);
-            response.addCookie(new Cookie("token", token));
 //            //登录成功，写入cookie和session
-//            request.getSession().setAttribute("user", githubUser);
+//            request.getSession().setAttribute("user", githubUser);//相当于写入session
+            response.addCookie(new Cookie("token", token));//写入cookie
             return "redirect:/";
 
         }else {

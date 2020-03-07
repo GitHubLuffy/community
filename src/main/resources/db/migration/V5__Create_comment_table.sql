@@ -1,12 +1,14 @@
 create table comment
 (
-	id bigint auto_increment,
-	parent_id bigint not null,
-	type int,
-	commentator int not null,
-	gmt_create bigint not null,
-	gmt_modified bigint not null,
-	like_count bigint default 0 not null
+  id bigint auto_increment,
+  parent_id bigint not null,
+  type int not null,
+  commentator int,
+  gmt_create bigint,
+  gmt_modified bigint not null,
+  like_count bigint default 0,
+  constraint comment_pk
+    primary key (id)
 );
 
 comment on column comment.parent_id is '父类ID';
