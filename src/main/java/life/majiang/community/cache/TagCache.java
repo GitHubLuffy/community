@@ -1,10 +1,12 @@
 package life.majiang.community.cache;
 
 import life.majiang.community.dto.TagDTO;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @Auther: luffy
@@ -57,6 +59,16 @@ public class TagCache {
         tagDTOS.add(others);
 
         return tagDTOS;
+    }
+
+    public static String filterInvalid(String tags){
+        String[] split = StringUtils.split(tags,",");
+        List<TagDTO> tagDTOS = get();
+
+        List<String> tagList = tagDTOS.stream().flatMap(tag-> tag.getTags().stream()).collect(Collectors.toList());//每一大类tag
+        String inValid = Arrays.stream(split).filter(t->!tagList.contains(t)).collect(Collectors.joining(","));
+
+        return inValid;
     }
 }
 
