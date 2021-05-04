@@ -11,11 +11,14 @@
 [flyway](https://flywaydb.org/getstarted/)
 [Thymeleat](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
 [jquery的api](https://api.jquery.com/)
+[Markdown 插件](http://editor.md.ipandao.com/)
+[Markdown 语法官方解释文档](https://github.com/pandao/editor.md)
+[UCloud上传操作官方文档](https://github.com/ucloud/ufile-sdk-java)
+
 ##工具
 [git地址](https://git-scm.com/download)
 [Visual Paradigm](https://www.visual-paradigm.com/tw/)
 [lombok](https://projectlombok.org/)
-
 ##脚本
 ```sql
 create table user
